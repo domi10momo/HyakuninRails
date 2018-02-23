@@ -1,0 +1,2 @@
+class Utum < ApplicationRecord
+end
