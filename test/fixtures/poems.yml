@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kaminoku: MyString
+  shimonoku: MyString
+  kami_furigana: MyString
+  shimo_furigana: MyString
+  author: MyString
+
+two:
+  kaminoku: MyString
+  shimonoku: MyString
+  kami_furigana: MyString
+  shimo_furigana: MyString
+  author: MyString
