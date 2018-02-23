@@ -1,0 +1,2 @@
+module HyakuninHelper
+end
