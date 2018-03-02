@@ -1,2 +1,8 @@
-<h1>Hyakunin#game</h1>
+<h1>Hyakuningame</h1>
 <p>Find me in app/views/hyakunin/game.html.erb</p>
+
+<% for no in @use_poems %>
+    <% @num = "%03d" % no.id %>
+    <%= image_tag "/images/" + @num.to_s + ".png",
+        :size => '70x100' %>
+<% end %>
