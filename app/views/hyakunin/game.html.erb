@@ -1,8 +1,16 @@
-<h1>Hyakuningame</h1>
-<p>Find me in app/views/hyakunin/game.html.erb</p>
+<h1>百人一首ゲーム</h1>
 
-<% for no in @use_poems %>
-    <% @num = "%03d" % no.id %>
-    <%= image_tag "/images/" + @num.to_s + ".png",
-        :size => '70x100' %>
-<% end %>
+<h2>読み札</h2>
+<p><%= @read_poem.kaminoku %></p>
+<table>
+<% @use_poems.each_with_index{ |value, index| %>
+    <% if index % 7 == 0 then %>
+    <tr>
+    <% end %>
+    <% num = "%03d" % value.id %>
+    <td><%= image_tag "/images/" + num.to_s + ".png", size: "70x100" %><td>
+    <% if index+1 % 7 == 0 then %>
+    </tr>
+    <% end %>
+<% } %>
+</table>
