@@ -9,6 +9,9 @@ class HyakuninController < ApplicationController
     getReadPoem()
   end
 
+  def game_react
+  end
+
   def getReadPoem
     @read_poem = @read_poems.sample(1).first
     @read_poems.delete(@read_poem)
