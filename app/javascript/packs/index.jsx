@@ -5,26 +5,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import PoemList from './components/PoemList'
-import ReadPoem from './components/ReadPoem'
-
-// テストデータ
-const use_poems = [
-  {id: 1},
-  {id: 2}
-];
-
-const read_poem = "秋の田の かりほの庵の 苫をあらみ";
+import axios from 'axios'
+import Game from './components/Game';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <div>
-      <h1>百人一首ゲーム(Reactバージョン)</h1>
-      <h2>読み札</h2>
-      <ReadPoem read_poem={read_poem} />
-      <h2>取り札</h2>
-      <PoemList use_poems={use_poems} />
-    </div>,
+    <Game/>, 
     document.body.appendChild(document.createElement('div')),
   )
 })

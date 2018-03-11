@@ -2,12 +2,15 @@ import React from 'react'
 import Poem from './Poem'
 
 const PoemList = (props) => {
-    const poemNodes = props.use_poems.map(p => (<Poem poem={p}/>));
+  if(props.displayPoems) {
+    console.log(props);
     return (
-        <div className="poemList">
-            {poemNodes}
-        </div>
+      <div className="poemList">
+        {props.displayPoems.map(p => (<Poem poem={p}/>))}
+      </div>
     )
+  }
+  return (<div className="poemList"></div>);
 }
 
 export default PoemList
