@@ -31,7 +31,7 @@ class Game extends React.Component {
         <h2>読み札</h2>
         <ReadPoem readPoem={this.state.read_poem} />
         <h2>取り札</h2>
-        <PoemList dipslayPems={this.state.display_pomes} />
+        <PoemList displayPoems={this.state.display_poems} />
       </div>
     );
   }
